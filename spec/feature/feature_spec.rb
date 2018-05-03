@@ -4,6 +4,7 @@ feature Battle do
   let(:name_1) { 'Bob' }
   let(:name_2) { 'Karen' }
   let(:normal_hit_points) { 50 }
+  let(:reduced_hit_points) { 40 }
 
   feature 'To set-up the game' do
     scenario 'Should allow players to enter their names' do
@@ -24,6 +25,13 @@ feature Battle do
       sign_in_and_play
       click_link('Nipple Cripple')
       expect(page).to have_content('You squeezed them raw!')
+    end
+
+    scenario 'should reduce health' do
+      sign_in_and_play
+      click_link('Nipple Cripple')
+      click_link('Release the Nips')
+      expect(page).to have_content "#{name_2} hit points: #{reduced_hit_points}"
     end
   end
 end

@@ -4,6 +4,7 @@ require './app.rb'
 require 'capybara'
 require 'capybara/rspec'
 require 'rspec'
+require 'feature/web_helpers'
 
 Capybara.app = Battle
 

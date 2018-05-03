@@ -26,5 +26,7 @@ class Battle < Sinatra::Base
     erb :play
   end
 
-
+  get '/cripplethem' do
+    erb :cripplethem
+  end
 end

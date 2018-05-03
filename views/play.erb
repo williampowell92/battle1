@@ -1,6 +1,26 @@
-<h1><%= @player_name_1 %> V <%= @player_name_2 %></h1>
-
-<div class="hit_points">
-  <p><%= @player_name_1 %> hit points: <%= @player_hit_points_1 %></p>
-  <p><%= @player_name_2 %> hit points: <%= @player_hit_points_2 %></p>
-</div>
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="/styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Titan+One" rel="stylesheet">
+  <style>
+    p {
+      font-family: 'Titan One', cursive;
+      font-size: 50px;
+      text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;
+    }
+    a {
+      font-family: 'Titan One', cursive;
+      font-size: 50px;
+    }
+  </style>
+</head>
+<body class="saiyan">
+  <p class="title"><%= @player_name_1 %> V <%= @player_name_2 %></p>
+  <div class="hit_points">
+    <p class="left"><%= @player_name_1 %> hit points: <%= @player_hit_points_1 %></p>
+    <p class="right"><%= @player_name_2 %> hit points: <%= @player_hit_points_2 %></p>
+  </div>
+  <a href='/cripplethem' class="button">Nipple Cripple</a>
+</body>
+</html>

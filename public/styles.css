@@ -1,0 +1,48 @@
+.button {
+  background-color: #004225;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 100px;
+    border-radius: 50px;
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.supersaiyan {
+  background-image: url('https://media.giphy.com/media/m32zTHRBlr8WY/giphy.gif');
+  background-size: cover;
+}
+
+.saiyan {
+  background-image: url('http://jonvilma.com/images/dragon-ball-z-3.jpg');
+  background-size: cover;
+}
+
+.title {
+  font-size: 100px;
+  text-align: center;
+}
+
+.centre {
+  position: absolute;
+  botto: 50%;
+}
+
+.left {
+  position: absolute;
+  top: 50%;
+  text-align: left;
+}
+
+.right {
+  position: absolute;
+  top: 50%;
+  right: 0%;
+  text-align: right;
+}

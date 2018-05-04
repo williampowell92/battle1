@@ -1,17 +1,33 @@
-.button {
-  background-color: #004225;
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 100px;
-    border-radius: 50px;
-    position: absolute;
-    bottom: 0%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+@import url('https://fonts.googleapis.com/css?family=Titan+One');
+
+h1 {
+  font-size: 100px;
+  text-align: center;
+}
+
+p {
+  font-size: 50px;
+}
+
+label {
+  font-size: 50px;
+}
+
+input {
+  font-size: 50px;
+}
+
+.titan-one {
+  font-family: 'Titan One', cursive;
+}
+
+.white-border {
+  text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;
+}
+
+.gokuvegeta {
+  background-image: url(https://1.bp.blogspot.com/-jGAEhXfHB6A/WjlhUsIC3aI/AAAAAAAABkE/KWk4fFnrBiUIY65vmOzM_W9XW1KOof51QCLcBGAs/s640/Goku%2Bvs%2BVegeta%2BFirst%2BFight.png);
+  background-size: cover;
 }
 
 .supersaiyan {
@@ -24,14 +40,20 @@
   background-size: cover;
 }
 
-.title {
-  font-size: 100px;
-  text-align: center;
-}
-
-.centre {
-  position: absolute;
-  bottom: 50%;
+.button {
+  background-color: #004225;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 50px;
+    border-radius: 50px;
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .left {

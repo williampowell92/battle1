@@ -29,8 +29,13 @@ class Battle < Sinatra::Base
   end
 
   get '/cripplethem' do
-    $game.attack
-
+    @game = $game
+    @game.attack
     erb :cripplethem
+  end
+
+  get '/death' do
+    @game = $game
+    erb :death
   end
 end

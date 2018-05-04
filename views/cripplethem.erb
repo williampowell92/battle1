@@ -4,7 +4,14 @@
   <link rel="stylesheet" type="text/css" href="/styles.css">
 </head>
 <body class="supersaiyan">
+
   <h1 class="titan-one white-border">You squeezed them raw!</h1>
+  <% if @game.attacker.health != 0 %>
   <a href='/play' class="button titan-one">Release the Nips</a>
+  <% else %>
+  <a href='/death' class="button titan-one">Release the Nips</a>
+  <% end %>
+
 </body>
 </html>
+

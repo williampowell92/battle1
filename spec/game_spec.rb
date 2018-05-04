@@ -1,7 +1,13 @@
 describe Game, :game do
-  subject { described_class.new(player, another_player) }
+  subject { described_class.instance }
   let(:player) { double :player, decrease_health: nil }
   let(:another_player) { double :another_player, decrease_health: nil}
+
+  before do
+    subject.instance_variable_set(:@turn, 0)
+    subject.player1 = player
+    subject.player2 = another_player
+  end
 
   describe '#attack' do
     it 'calls reduce_health on argument' do
@@ -36,6 +42,7 @@ describe Game, :game do
 
   describe '#attacker' do
     it 'starts as player 1' do
+      p subject
       expect(subject.attacker).to eq player
     end
 
@@ -53,6 +60,12 @@ describe Game, :game do
     it 'changes to player 1 after attack' do
       subject.attack
       expect(subject.victim).to eq player
+    end
+  end
+
+  describe '#instance' do
+    it 'creates an instance of itself' do
+      expect(described_class.instance).to be_an_instance_of described_class
     end
   end
 end

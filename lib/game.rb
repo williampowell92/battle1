@@ -1,10 +1,14 @@
 class Game
-  attr_reader :player1, :player2
+  attr_accessor :player1, :player2, :turn
 
-  def initialize(player1, player2)
-    @player1 = player1
-    @player2 = player2
+  def initialize
     @turn = 0
+  end
+
+  @@instance = Game.new
+
+  def self.instance
+    @@instance
   end
 
   def attack
@@ -25,4 +29,6 @@ class Game
   def next_turn
     @turn += 1
   end
+
+  private_class_method :new
 end

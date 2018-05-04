@@ -7,35 +7,32 @@ class Battle < Sinatra::Base
   enable :sessions
   set :session_secret, "Our secret session"
 
+  before do
+    @game = Game.instance
+  end
+
   get '/' do
     erb(:index)
   end
 
   post '/names' do
-    $game = Game.new(Player.new(params[:player_name_1]),
-                     Player.new(params[:player_name_2]))
+    @game.turn = 0
+    @game.player1 = Player.new(params[:player_name_1])
+    @game.player2 = Player.new(params[:player_name_2])
 
     redirect '/play'
   end
 
   get '/play' do
-    @player_name_1 = $game.player1.name
-    @player_name_2 = $game.player2.name
-    @player_hit_points_1 = $game.player1.health
-    @player_hit_points_2 = $game.player2.health
-    @attacker = $game.attacker.name
-
     erb :play
   end
 
   get '/cripplethem' do
-    @game = $game
     @game.attack
     erb :cripplethem
   end
 
   get '/death' do
-    @game = $game
     erb :death
   end
 end

@@ -4,13 +4,13 @@
   <link rel="stylesheet" type="text/css" href="/styles.css">
 </head>
 <body class="saiyan">
-  <h1 class="titan-one white-border"><%= @player_name_1 %> V <%= @player_name_2 %></h1>
+  <h1 class="titan-one white-border"><%= @game.player1.name %> V <%= @game.player2.name %></h1>
   <div class="titan-one white-border">
-    <p class="left"><%= @player_name_1 %> hit points: <%= @player_hit_points_1 %></p>
-    <p class="right"><%= @player_name_2 %> hit points: <%= @player_hit_points_2 %></p>
+    <p class="left"><%= @game.player1.name %> hit points: <%= @game.player1.health %></p>
+    <p class="right"><%= @game.player2.name %> hit points: <%= @game.player2.health %></p>
   </div>
   <div class="titan-one white-border centre">
-    <p><%= @attacker %>'s turn</p>
+    <p><%= @game.attacker.name %>'s turn</p>
   </div>
   <a href='/cripplethem' class="button titan-one">Nipple Cripple</a>
 </body>

@@ -8,8 +8,16 @@ class Game
   end
 
   def attack
-    @turn.even? ? @player2.decrease_health : @player1.decrease_health
+    victim.decrease_health
     next_turn
+  end
+
+  def attacker
+    @turn.even? ? @player1 : @player2
+  end
+
+  def victim
+    @turn.odd? ? @player1 : @player2
   end
 
   private

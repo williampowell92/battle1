@@ -1,11 +1,12 @@
 describe Game, :game do
-  subject { described_class.new(player, player) }
+  subject { described_class.new(player, another_player) }
   let(:player) { instance_double Player, decrease_health: nil }
+  let(:another_player) { instance_double Player, decrease_health: nil}
 
   describe '#attack' do
     it 'calls reduce_health on argument' do
-      subject.attack(player)
-      expect(player).to have_received(:decrease_health)
+      subject.attack
+      expect(another_player).to have_received(:decrease_health)
     end
   end
 
@@ -23,7 +24,15 @@ describe Game, :game do
 
   describe '#player2' do
     it 'can read player2' do
-      expect(subject.player2).to eq player
+      expect(subject.player2).to eq another_player
+    end
+  end
+
+  describe '#switch_turn' do
+    it 'changes which player attacks' do
+      subject.attack
+      subject.attack
+      expect(player).to have_received(:decrease_health)
     end
   end
 end

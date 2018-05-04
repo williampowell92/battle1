@@ -23,12 +23,4 @@ describe Player do
       expect(subject.health).to eq 40
     end
   end
-
-  describe '#attack' do
-    it 'calls reduce_health on argument' do
-      subject.attack(player)
-      expect(player).to have_received(:decrease_health)
-    end
-  end
-
 end

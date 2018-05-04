@@ -11,9 +11,4 @@ class Player
   def decrease_health
     @health -= 10
   end
-
-  def attack(player)
-    player.decrease_health
-  end
-
 end
